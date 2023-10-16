@@ -1,0 +1,132 @@
+{
+  "promotions": [
+    {
+      "id": 1,
+      "imageUri": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2589&q=80",
+      "name": "Bolo de Cocô",
+      "description": "Bolo de massa de cocô com raspinhas de como",
+      "price": 25.50,
+      "stars": 5,
+      "reviews": 32
+    },
+    {
+      "id": 2,
+      "imageUri": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2589&q=80",
+      "name": "Bolo de Mandioca",
+      "description": "Bolo de massa de cocô com raspinhas de como",
+      "price": 15.50,
+      "stars": 5,
+      "reviews": 32
+    },
+    {
+      "id": 3,
+      "imageUri": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2589&q=80",
+      "name": "Bolo de Laranja",
+      "description": "Bolo de massa de cocô com raspinhas de como",
+      "price": 30.50,
+      "stars": 5,
+      "reviews": 32
+    },
+    {
+      "id": 4,
+      "imageUri": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2589&q=80",
+      "name": "Bolo de Cocô",
+      "description": "Bolo de massa de cocô com raspinhas de como",
+      "price": 25.50,
+      "stars": 2,
+      "reviews": 32
+    },
+    {
+      "id": 5,
+      "imageUri": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2589&q=80",
+      "name": "Bolo de Mandioca",
+      "description": "Bolo de massa de cocô com raspinhas de como dddd ldfodsofjdslf fosdflfj fosdfjlsfjo fsdlfjodsf sdfof dsfdsofof sdfofjsdof ofdsjof sdfjuods fsdo fosdf",
+      "price": 15.50,
+      "stars": 5,
+      "reviews": 32
+    },
+    {
+      "id": 6,
+      "imageUri": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2589&q=80",
+      "name": "Bolo de Laranja",
+      "description": "Bolo de massa de cocô com raspinhas de como",
+      "price": 30.50,
+      "stars": 3,
+      "reviews": 32
+    }
+  ],
+  "bests": [
+    {
+      "id": 1,
+      "imageUri": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2589&q=80",
+      "name": "Bolo de Cocô",
+      "description": "Bolo de massa de cocô com raspinhas de como",
+      "price": 25.50,
+      "stars": 5,
+      "reviews": 32
+    },
+    {
+      "id": 2,
+      "imageUri": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2589&q=80",
+      "name": "Bolo de Mandioca",
+      "description": "Bolo de massa de cocô com raspinhas de como",
+      "price": 15.50,
+      "stars": 5,
+      "reviews": 32
+    },
+    {
+      "id": 3,
+      "imageUri": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2589&q=80",
+      "name": "Bolo de Laranja",
+      "description": "Bolo de massa de cocô com raspinhas de como",
+      "price": 30.50,
+      "stars": 5,
+      "reviews": 32
+    },
+    {
+      "id": 4,
+      "imageUri": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2589&q=80",
+      "name": "Bolo de Cocô",
+      "description": "Bolo de massa de cocô com raspinhas de como",
+      "price": 25.50,
+      "stars": 2,
+      "reviews": 32
+    },
+    {
+      "id": 5,
+      "imageUri": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2589&q=80",
+      "name": "Bolo de Mandioca",
+      "description": "Bolo de massa de cocô com raspinhas de como dddd ldfodsofjdslf fosdflfj fosdfjlsfjo fsdlfjodsf sdfof dsfdsofof sdfofjsdof ofdsjof sdfjuods fsdo fosdf",
+      "price": 15.50,
+      "stars": 5,
+      "reviews": 32
+    },
+    {
+      "id": 6,
+      "imageUri": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2589&q=80",
+      "name": "Bolo de Laranja",
+      "description": "Bolo de massa de cocô com raspinhas de como",
+      "price": 30.50,
+      "stars": 3,
+      "reviews": 32
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "title": "Titulo",
+      "subtitle": "Subtitulo de teste",
+      "message": "Menssagem de boas vindas",
+      "color": "bluegray",
+      "imageUri": "https://images.unsplash.com/photo-1665686374221-1901faa9f3ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80"
+    },
+    {
+      "id": 1,
+      "title": "Titulo",
+      "subtitle": "Subtitulo de teste",
+      "message": "Menssagem de boas vindas ola tudo bem com você e tudo bdlo fsdlfo fsofjsfoo",
+      "color": "purple",
+      "imageUri": "https://images.unsplash.com/photo-1665686374221-1901faa9f3ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80"
+    }
+  ]
+}

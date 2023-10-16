@@ -1,0 +1,19 @@
+<div class="w-full flex justify-content-center">
+  <div style="width: min(1450px, 100vw)">
+    <p-carousel
+      [value]="items"
+      [numVisible]="4"
+      [numScroll]="1"
+      [circular]="true"
+      [responsiveOptions]="responsiveOptions">
+      <ng-template pTemplate="header">
+        <p class="text-500 text-2xl font-bold">{{ title }}</p>
+      </ng-template>
+      <ng-template let-item pTemplate="item">
+        <div class="md:p-2">
+          <app-product-card [data]="item" />
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</div>

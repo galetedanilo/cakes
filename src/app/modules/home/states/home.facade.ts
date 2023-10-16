@@ -1,0 +1,25 @@
+import { Injectable, inject } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { homeFeature } from './home.feature';
+import { homeActions } from './home.actions';
+
+@Injectable()
+export class HomeFacade {
+  #store = inject(Store);
+
+  get promotionsSignal() {
+    return this.#store.selectSignal(homeFeature.selectPromotions);
+  }
+
+  get bestsSignal() {
+    return this.#store.selectSignal(homeFeature.selectBests);
+  }
+
+  get messagesSignal() {
+    return this.#store.selectSignal(homeFeature.selectMessages);
+  }
+
+  enterPage() {
+    this.#store.dispatch(homeActions.enterPage());
+  }
+}

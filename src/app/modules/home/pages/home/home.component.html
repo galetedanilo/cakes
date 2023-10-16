@@ -1,0 +1,9 @@
+<app-product-slide [items]="facade.promotionsSignal()" title="Our Promotions" />
+
+<app-messages-container [data]="facade.messagesSignal()" />
+
+<app-product-slide [items]="facade.bestsSignal()" title="Our Bests Seller" />
+
+<div class="h-20rem bg-blue-900">
+  <app-proffer-card />
+</div>

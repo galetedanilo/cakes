@@ -1,0 +1,30 @@
+<p-card header="{{ data.name }}" subheader="{{ data.price | currency }}">
+  <ng-template pTemplate="header">
+    <img class="border-round-top" alt="Card" [src]="data.imageUri" />
+  </ng-template>
+  <p-rating
+    class="mr-3"
+    [readonly]="true"
+    [cancel]="false"
+    [stars]="5"
+    [(ngModel)]="data.stars"></p-rating>
+  <span class="text-500">{{ data.reviews }} reviews</span>
+  <p
+    class="overflow-hidden text-overflow-ellipsis"
+    style="
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+    ">
+    {{ data.description }}
+  </p>
+  <ng-template pTemplate="footer">
+    <p-button label="View" icon="pi pi-search"></p-button>
+    <p-button
+      label="Buy Now"
+      icon="pi pi-shopping-cart"
+      styleClass="p-button-secondary"
+      [style]="{ 'margin-left': '.5em' }"></p-button>
+  </ng-template>
+</p-card>
