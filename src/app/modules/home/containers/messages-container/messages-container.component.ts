@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MessageCardComponent } from '../message-card/message-card.component';
-import { IMessageCardModel } from '../../models';
+
+import { IMessageModel } from '../../models';
+import { MessageCardComponent } from '../../ui';
 
 @Component({
   selector: 'app-messages-container',
@@ -11,6 +12,6 @@ import { IMessageCardModel } from '../../models';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MessagesContainerComponent {
-  @Input({ required: true }) data!: IMessageCardModel[];
+  @Input({ required: true }) data!: IMessageModel[];
   color = 'read';
 }

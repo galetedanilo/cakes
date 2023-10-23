@@ -2,14 +2,16 @@ import { createFeature, createReducer, on } from '@ngrx/store';
 import { IHomeState } from '../interfaces';
 import { createEntityAdapter } from '@ngrx/entity';
 import { homeActions } from './home.actions';
-import { IProductCardModel } from '../models';
+import { IProductModel } from '../models';
 
-const adapter = createEntityAdapter<IProductCardModel>();
+const adapter = createEntityAdapter<IProductModel>();
 
 const initialState: IHomeState = adapter.getInitialState({
   promotions: [],
   bests: [],
   messages: [],
+  proffers: [],
+  reviews: [],
   isLoading: false,
 });
 
@@ -67,10 +69,32 @@ const reducer = createReducer(
     })
   ),
   on(
+    homeActions.loadProffers,
+    (state): IHomeState => ({
+      ...state,
+      isLoading: true,
+    })
+  ),
+  on(
     homeActions.loadPromotions,
     (state): IHomeState => ({
       ...state,
       isLoading: true,
+    })
+  ),
+  on(
+    homeActions.loadProffersSuccess,
+    (state, action): IHomeState => ({
+      ...state,
+      isLoading: false,
+      proffers: action.proffers,
+    })
+  ),
+  on(
+    homeActions.loadProfferFailed,
+    (state): IHomeState => ({
+      ...state,
+      isLoading: false,
     })
   ),
   on(
@@ -83,6 +107,28 @@ const reducer = createReducer(
   ),
   on(
     homeActions.loadPromotionsFailed,
+    (state): IHomeState => ({
+      ...state,
+      isLoading: false,
+    })
+  ),
+  on(
+    homeActions.loadReviews,
+    (state): IHomeState => ({
+      ...state,
+      isLoading: true,
+    })
+  ),
+  on(
+    homeActions.loadReviewsSuccess,
+    (state, action): IHomeState => ({
+      ...state,
+      reviews: action.reviews,
+      isLoading: false,
+    })
+  ),
+  on(
+    homeActions.loadReviewsFailed,
     (state): IHomeState => ({
       ...state,
       isLoading: false,

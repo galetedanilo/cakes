@@ -44,4 +44,28 @@ export class HomeEffect {
       )
     );
   });
+
+  proffers$ = createEffect(() => {
+    return this.#actions.pipe(
+      ofType(homeActions.loadProffers, homeActions.loadMessagesSuccess),
+      exhaustMap(() =>
+        this.#service.getProffers().pipe(
+          map(proffers => homeActions.loadProffersSuccess({ proffers })),
+          catchError(() => of(homeActions.loadProfferFailed))
+        )
+      )
+    );
+  });
+
+  reviews$ = createEffect(() => {
+    return this.#actions.pipe(
+      ofType(homeActions.loadReviews, homeActions.loadProffersSuccess),
+      exhaustMap(() =>
+        this.#service.getReviews().pipe(
+          map(reviews => homeActions.loadReviewsSuccess({ reviews })),
+          catchError(() => of(homeActions.loadReviewsFailed))
+        )
+      )
+    );
+  });
 }

@@ -1,20 +1,31 @@
 import { createActionGroup, emptyProps, props } from '@ngrx/store';
-import { IProductCardModel, IMessageCardModel } from '../models';
+import {
+  IProductModel,
+  IMessageModel,
+  IProfferModel,
+  IReviewModel,
+} from '../models';
 
 export const homeActions = createActionGroup({
   source: 'Home Page',
   events: {
     enterPage: emptyProps(),
     loadBests: emptyProps(),
-    loadBestsSuccess: props<{ bests: IProductCardModel[] }>(),
+    loadBestsSuccess: props<{ bests: IProductModel[] }>(),
     loadBestsFailed: emptyProps(),
     loadMessages: emptyProps(),
-    loadMessagesSuccess: props<{ messages: IMessageCardModel[] }>(),
+    loadMessagesSuccess: props<{ messages: IMessageModel[] }>(),
     loadMessagesFailed: emptyProps(),
+    loadProffers: emptyProps(),
+    loadProffersSuccess: props<{ proffers: IProfferModel[] }>(),
+    loadProfferFailed: emptyProps(),
     loadPromotions: emptyProps(),
     loadPromotionsSuccess: props<{
-      promotions: IProductCardModel[];
+      promotions: IProductModel[];
     }>(),
     loadPromotionsFailed: emptyProps(),
+    loadReviews: emptyProps(),
+    loadReviewsSuccess: props<{ reviews: IReviewModel[] }>(),
+    loadReviewsFailed: emptyProps(),
   },
 });

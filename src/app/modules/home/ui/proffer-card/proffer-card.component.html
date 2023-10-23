@@ -1,3 +1,7 @@
-<div class="flex">
-  <i class="icofont-vehicle-delivery-van icofont-5x text-white"></i>
+<div
+  class="flex flex-column md:flex-row align-items-center text-white md:h-20rem">
+  <i class="icofont-5x" [ngClass]="data.icon"></i>
+  <p class="text-md text-center line-height-3">
+    {{ data.message }}
+  </p>
 </div>

@@ -1,0 +1,7 @@
+<div class="flex align-items-center justify-content-center py-5 px-3 w-full">
+  <div
+    class="flex flex-column md:flex-row md:gap-6"
+    style="width: min(1450px, 100vw)">
+    <app-review-card *ngFor="let item of data" [data]="item" />
+  </div>
+</div>

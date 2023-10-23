@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { IMessageCardModel } from '../../models';
 import { NgClass } from '@angular/common';
+
+import { IMessageModel } from '../../models';
 
 @Component({
   selector: 'app-message-card',
@@ -10,6 +11,6 @@ import { NgClass } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MessageCardComponent {
-  @Input({ required: true }) data!: IMessageCardModel;
+  @Input({ required: true }) data!: IMessageModel;
   @Input({ required: true }) isReverse = false;
 }

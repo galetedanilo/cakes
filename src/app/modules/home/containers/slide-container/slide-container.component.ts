@@ -1,18 +1,20 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 import { CarouselModule } from 'primeng/carousel';
-import { IProductCardModel } from '../../models';
-import { ProductCardComponent } from '../product-card/product-card.component';
+
+import { IProductModel } from '../../models';
+
+import { ProductCardComponent } from '../../ui';
 
 @Component({
-  selector: 'app-product-slide',
+  selector: 'app-slide-container',
   standalone: true,
   imports: [CarouselModule, ProductCardComponent],
-  templateUrl: './product-slide.component.html',
+  templateUrl: './slide-container.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProductSlideComponent {
-  @Input({ required: true }) items!: IProductCardModel[];
+export class SlideContainerComponent {
+  @Input({ required: true }) data!: IProductModel[];
   @Input({ required: true }) title!: string;
 
   protected responsiveOptions = [

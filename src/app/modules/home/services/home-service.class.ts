@@ -1,8 +1,15 @@
 import { Observable } from 'rxjs';
-import { IProductCardModel, IMessageCardModel } from '../models';
+import {
+  IProductModel,
+  IMessageModel,
+  IProfferModel,
+  IReviewModel,
+} from '../models';
 
 export abstract class AHomeServiceClass {
-  abstract getPromotions(): Observable<IProductCardModel[]>;
-  abstract getBests(): Observable<IProductCardModel[]>;
-  abstract getMessages(): Observable<IMessageCardModel[]>;
+  abstract getPromotions(): Observable<IProductModel[]>;
+  abstract getBests(): Observable<IProductModel[]>;
+  abstract getMessages(): Observable<IMessageModel[]>;
+  abstract getProffers(): Observable<IProfferModel[]>;
+  abstract getReviews(): Observable<IReviewModel[]>;
 }

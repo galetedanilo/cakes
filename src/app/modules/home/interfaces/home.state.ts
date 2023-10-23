@@ -1,9 +1,16 @@
 import { EntityState } from '@ngrx/entity';
-import { IProductCardModel, IMessageCardModel } from '../models';
+import {
+  IProductModel,
+  IMessageModel,
+  IProfferModel,
+  IReviewModel,
+} from '../models';
 
-export interface IHomeState extends EntityState<IProductCardModel> {
-  promotions: IProductCardModel[];
-  bests: IProductCardModel[];
-  messages: IMessageCardModel[];
+export interface IHomeState extends EntityState<IProductModel> {
+  promotions: IProductModel[];
+  bests: IProductModel[];
+  messages: IMessageModel[];
+  proffers: IProfferModel[];
+  reviews: IReviewModel[];
   isLoading: boolean;
 }

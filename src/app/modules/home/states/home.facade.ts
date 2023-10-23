@@ -19,6 +19,14 @@ export class HomeFacade {
     return this.#store.selectSignal(homeFeature.selectMessages);
   }
 
+  get proffersSignal() {
+    return this.#store.selectSignal(homeFeature.selectProffers);
+  }
+
+  get reviewsSignal() {
+    return this.#store.selectSignal(homeFeature.selectReviews);
+  }
+
   enterPage() {
     this.#store.dispatch(homeActions.enterPage());
   }

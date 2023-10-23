@@ -1,19 +1,23 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import {
-  MessagesContainerComponent,
-  ProductSlideComponent,
-  ProfferCardComponent,
-} from '../../ui';
+
 import { HomeFacade } from '../../states';
 import { CommonModule } from '@angular/common';
+
+import {
+  MessagesContainerComponent,
+  ProfferContainerComponent,
+  ReviewsContainerComponent,
+  SlideContainerComponent,
+} from '../../containers';
 
 @Component({
   standalone: true,
   imports: [
     CommonModule,
     MessagesContainerComponent,
-    ProductSlideComponent,
-    ProfferCardComponent,
+    ProfferContainerComponent,
+    SlideContainerComponent,
+    ReviewsContainerComponent,
   ],
   templateUrl: './home.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,

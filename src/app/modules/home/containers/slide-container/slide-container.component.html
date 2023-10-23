@@ -1,7 +1,7 @@
 <div class="w-full flex justify-content-center">
   <div style="width: min(1450px, 100vw)">
     <p-carousel
-      [value]="items"
+      [value]="data"
       [numVisible]="4"
       [numScroll]="1"
       [circular]="true"
@@ -10,7 +10,7 @@
         <p class="text-500 text-2xl font-bold">{{ title }}</p>
       </ng-template>
       <ng-template let-item pTemplate="item">
-        <div class="md:p-2">
+        <div class="p-1 md:p-2">
           <app-product-card [data]="item" />
         </div>
       </ng-template>

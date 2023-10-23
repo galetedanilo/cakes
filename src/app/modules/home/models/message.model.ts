@@ -1,4 +1,4 @@
-export interface IMessageCardModel {
+export interface IMessageModel {
   id: string;
   title: string;
   subtitle: string;

@@ -1,4 +1,4 @@
-export interface IProductCardModel {
+export interface IProductModel {
   id: string;
   imageUri: string;
   name: string;

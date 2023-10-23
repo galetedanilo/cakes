@@ -6,7 +6,9 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { RatingModule } from 'primeng/rating';
 
-import { IProductCardModel } from '../../models';
+import { IProductModel } from '../../models';
+
+
 
 @Component({
   selector: 'app-product-card',
@@ -16,5 +18,5 @@ import { IProductCardModel } from '../../models';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductCardComponent {
-  @Input({ required: true }) data!: IProductCardModel;
+  @Input({ required: true }) data!: IProductModel;
 }

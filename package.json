@@ -11,7 +11,7 @@
     "test:coverage": "jest --coverage",
     "lint": "ng lint",
     "prettier": "npx prettier --write .",
-    "server": "json-server ./data/db.json --watch"
+    "server": "json-server ./data/db.json --port=5000 --watch"
   },
   "private": true,
   "dependencies": {
