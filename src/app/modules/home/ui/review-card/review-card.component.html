@@ -1,8 +1,19 @@
-<div class="shadow-2 surface-card border-round p-4 w-12 md:w-4">
+<div class="shadow-2 surface-card border-round-xl p-4 w-12">
   <div class="flex">
-    <div class="flex flex-column w-9">
+    <div class="flex flex-column w-9 lg:w-7">
       <h4 class="text-900 font-medium">{{ data.username }}</h4>
+      <p-rating
+        class="mr-3"
+        [readonly]="true"
+        [cancel]="false"
+        [stars]="5"
+        [(ngModel)]="data.stars"></p-rating>
+      <p>{{ data.message }}</p>
+    </div>
+    <div class="w-3 lg:w-5">
+      <div
+        class="bg-cover bg-center w-auto h-auto border-circle"
+        style="background-image: url({{ data.userImageUri }});"></div>
     </div>
   </div>
-  
 </div>

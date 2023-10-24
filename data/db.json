@@ -149,13 +149,33 @@
   "reviews": [
     {
       "id": 1,
-      "message": "string",
-      "stars": "number",
+      "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet earum praesentium quaerat delectus perferendis dolorum provident culpa ullam odio asperiores.",
+      "stars": 3,
       "date": "string",
       "username": "Danilo Fernandes Galete",
-      "userImageUri": "string",
+      "userImageUri": "https://images.unsplash.com/photo-1665686374221-1901faa9f3ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80",
       "product": "string",
-      "productImageUri": "string"
+      "productImageUri": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2589&q=80"
+    },
+    {
+      "id": 2,
+      "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet earum praesentium quaerat delectus perferendis dolorum provident culpa ullam odio asperiores.",
+      "stars": 4,
+      "date": "string",
+      "username": "Danilo Fernandes Galete",
+      "userImageUri": "https://images.unsplash.com/photo-1665686374221-1901faa9f3ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80",
+      "product": "string",
+      "productImageUri": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2589&q=80"
+    },
+    {
+      "id": 3,
+      "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet earum praesentium quaerat delectus perferendis dolorum provident culpa ullam odio asperiores.",
+      "stars": 5,
+      "date": "string",
+      "username": "Danilo Fernandes Galete",
+      "userImageUri": "https://images.unsplash.com/photo-1665686374221-1901faa9f3ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80",
+      "product": "string",
+      "productImageUri": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2589&q=80"
     }
   ]
 }

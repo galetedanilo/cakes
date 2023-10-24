@@ -8,8 +8,6 @@ import { RatingModule } from 'primeng/rating';
 
 import { IProductModel } from '../../models';
 
-
-
 @Component({
   selector: 'app-product-card',
   standalone: true,
