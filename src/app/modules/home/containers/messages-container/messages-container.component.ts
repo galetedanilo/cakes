@@ -13,5 +13,4 @@ import { MessageCardComponent } from '../../ui';
 })
 export class MessagesContainerComponent {
   @Input({ required: true }) data!: IMessageModel[];
-  color = 'read';
 }

@@ -1,10 +1,20 @@
+interface IUserModel {
+  id: string;
+  name: string;
+  imageUri: string;
+}
+
+interface IProductModel {
+  id: string;
+  name: string;
+  imageUri: string;
+}
+
 export interface IReviewModel {
   id: string;
   message: string;
   stars: number;
   date: string;
-  username: string;
-  userImageUri: string;
-  product: string;
-  productImageUri: string;
+  user: IUserModel;
+  product: IProductModel;
 }
