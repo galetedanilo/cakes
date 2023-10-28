@@ -1,25 +1,41 @@
 <div class="shadow-2 surface-card border-round-xl p-4 w-12">
-  <div class="flex border-bottom-1 surface-border">
+  <div class="flex">
     <div class="flex flex-column w-9 lg:w-7">
-      <p class="text-900 font-medium">{{ data.user.name }}</p>
+      <p class="text-900 font-medium" data-test="username">
+        {{ data.user.name }}
+      </p>
       <p-rating
         class="mr-3"
         [readonly]="true"
         [cancel]="false"
         [stars]="5"
         [(ngModel)]="data.stars"></p-rating>
-      <p class="text-700 line-height-3">{{ data.message }}</p>
+      <p class="text-700 line-height-3" data-test="message">
+        {{ data.message }}
+      </p>
     </div>
     <div class="w-3 lg:w-5 flex align-items-center justify-content-center">
       <div
         class="bg-cover bg-center w-10rem h-10rem border-circle"
-        style="background-image: url({{ data.user.imageUri }});"></div>
+        [ngStyle]="{ 'background-image': 'url(' + data.user.imageUri + ')' }"
+        data-test="user-image"></div>
     </div>
   </div>
+  <div class="border-bottom-1 surface-border pb-2">
+    <span class="text-500 font-medium text-sm" data-test="date">{{
+      data.date | date: 'medium'
+    }}</span>
+  </div>
   <div class="flex gap-4 pt-4">
-    <img class="border-round-md w-5rem h-5rem" [src]="data.product.imageUri" alt="Product" />
+    <img
+      class="border-round-md w-5rem h-5rem"
+      [src]="data.product.imageUri"
+      alt="Product"
+      data-test="product-image" />
     <div>
-      <p class="text-900 font-medium">{{ data.product.name }}</p>
+      <p class="text-900 font-medium" data-test="product-name">
+        {{ data.product.name }}
+      </p>
     </div>
   </div>
 </div>

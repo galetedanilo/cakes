@@ -6,4 +6,9 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./modules/home/home.routes').then(r => r.HOME_ROUTES),
   },
+  {
+    path: 'manager',
+    loadChildren: () =>
+      import('./modules/manager/manager.routes').then(r => r.MANAGER_ROUTES),
+  },
 ];

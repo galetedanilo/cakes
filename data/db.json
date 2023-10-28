@@ -151,7 +151,7 @@
       "id": 1,
       "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet earum praesentium quaerat delectus perferendis dolorum provident culpa ullam odio asperiores.",
       "stars": 3,
-      "date": "string",
+      "date": "2023-12-17T18:24:00.000Z",
       "user": {
         "id": 1,
         "name": "Danilo Fernandes Galete",
@@ -168,7 +168,7 @@
       "id": 2,
       "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet earum praesentium quaerat delectus perferendis dolorum provident culpa ullam odio asperiores.",
       "stars": 3,
-      "date": "string",
+      "date": "2023-12-17T13:16:00.000Z",
       "user": {
         "id": 1,
         "name": "Danilo Fernandes Galete",
@@ -185,7 +185,7 @@
       "id": 3,
       "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet earum praesentium quaerat delectus perferendis dolorum provident culpa ullam odio asperiores.",
       "stars": 3,
-      "date": "string",
+      "date": "2023-12-17T10:15:00.000Z",
       "user": {
         "id": 1,
         "name": "Danilo Fernandes Galete",

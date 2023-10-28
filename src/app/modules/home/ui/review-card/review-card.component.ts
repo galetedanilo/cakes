@@ -4,11 +4,12 @@ import { RatingModule } from 'primeng/rating';
 
 import { IReviewModel } from '../../models';
 import { FormsModule } from '@angular/forms';
+import { DatePipe, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-review-card',
   standalone: true,
-  imports: [FormsModule, RatingModule],
+  imports: [FormsModule, DatePipe, NgStyle, RatingModule],
   templateUrl: './review-card.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
