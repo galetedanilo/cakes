@@ -20,7 +20,10 @@
     {{ data.description }}
   </p>
   <ng-template pTemplate="footer">
-    <p-button label="View" icon="pi pi-search"></p-button>
+    <p-button
+      label="View"
+      icon="pi pi-search"
+      (onClick)="isSelected.emit(data.id)"></p-button>
     <p-button
       class="pl-1 md:pl-3"
       label="Buy Now"

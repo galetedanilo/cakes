@@ -1,17 +1,17 @@
 import { createFeature, createReducer, on } from '@ngrx/store';
-import { IHomeState } from '../interfaces';
 import { createEntityAdapter } from '@ngrx/entity';
 import { homeActions } from './home.actions';
 import { IProductModel } from '../models';
+import { IHomeState } from './home.state';
 
 const adapter = createEntityAdapter<IProductModel>();
 
 const initialState: IHomeState = adapter.getInitialState({
-  promotions: [],
   bests: [],
   messages: [],
   proffers: [],
   reviews: [],
+  selected: null,
   isLoading: false,
 });
 
@@ -22,6 +22,23 @@ const reducer = createReducer(
     (state): IHomeState => ({
       ...state,
       isLoading: true,
+    })
+  ),
+  on(
+    homeActions.loadPromotions,
+    (state): IHomeState => ({
+      ...state,
+      isLoading: true,
+    })
+  ),
+  on(homeActions.loadPromotionsSuccess, (state, action): IHomeState => {
+    return adapter.addMany(action.promotions, { ...state, isLoading: false });
+  }),
+  on(
+    homeActions.loadPromotionsFailed,
+    (state): IHomeState => ({
+      ...state,
+      isLoading: false,
     })
   ),
   on(
@@ -76,13 +93,6 @@ const reducer = createReducer(
     })
   ),
   on(
-    homeActions.loadPromotions,
-    (state): IHomeState => ({
-      ...state,
-      isLoading: true,
-    })
-  ),
-  on(
     homeActions.loadProffersSuccess,
     (state, action): IHomeState => ({
       ...state,
@@ -92,21 +102,6 @@ const reducer = createReducer(
   ),
   on(
     homeActions.loadProfferFailed,
-    (state): IHomeState => ({
-      ...state,
-      isLoading: false,
-    })
-  ),
-  on(
-    homeActions.loadPromotionsSuccess,
-    (state, action): IHomeState => ({
-      ...state,
-      promotions: action.promotions,
-      isLoading: false,
-    })
-  ),
-  on(
-    homeActions.loadPromotionsFailed,
     (state): IHomeState => ({
       ...state,
       isLoading: false,
@@ -131,7 +126,15 @@ const reducer = createReducer(
     homeActions.loadReviewsFailed,
     (state): IHomeState => ({
       ...state,
+      reviews: null,
       isLoading: false,
+    })
+  ),
+  on(
+    homeActions.selectedProduct,
+    (state, action) => ({
+      ...state,
+      selected: action.id,
     })
   )
 );

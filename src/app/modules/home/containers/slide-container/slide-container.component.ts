@@ -1,21 +1,28 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { NgIf } from '@angular/common';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { CarouselModule } from 'primeng/carousel';
 
 import { IProductModel } from '../../models';
 
-import { ProductCardComponent } from '../../ui';
+import { ProductCardComponent, ProductCardSkeletonComponent } from '../../ui';
 
 @Component({
   selector: 'app-slide-container',
   standalone: true,
-  imports: [CarouselModule, ProductCardComponent],
+  imports: [
+    NgIf,
+    CarouselModule,
+    ProductCardComponent,
+    ProductCardSkeletonComponent,
+  ],
   templateUrl: './slide-container.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SlideContainerComponent {
   @Input({ required: true }) data!: IProductModel[];
   @Input({ required: true }) title!: string;
+  @Output() isSelected = new EventEmitter<string | null>();
 
   protected responsiveOptions = [
     {

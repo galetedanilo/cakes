@@ -7,10 +7,10 @@ import {
 } from '../models';
 
 export interface IHomeState extends EntityState<IProductModel> {
-  promotions: IProductModel[];
   bests: IProductModel[];
   messages: IMessageModel[];
   proffers: IProfferModel[];
-  reviews: IReviewModel[];
+  reviews: IReviewModel[] | null;
+  selected: string | null;
   isLoading: boolean;
 }

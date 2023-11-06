@@ -1,7 +1,10 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, inject } from '@angular/core';
+
+import { CommonModule } from '@angular/common';
+
+import { DialogModule } from 'primeng/dialog';
 
 import { HomeFacade } from '../../states';
-import { CommonModule } from '@angular/common';
 
 import {
   MessagesContainerComponent,
@@ -14,6 +17,7 @@ import {
   standalone: true,
   imports: [
     CommonModule,
+    DialogModule,
     MessagesContainerComponent,
     ProfferContainerComponent,
     SlideContainerComponent,
@@ -24,4 +28,13 @@ import {
 })
 export class HomeComponent {
   protected facade = inject(HomeFacade);
+
+  isSelected = true;
+
+  constructor() {
+    effect(() => {
+      this.isSelected = !!this.facade.selectedProduct();
+      console.log("Chamou")
+    })
+  }
 }

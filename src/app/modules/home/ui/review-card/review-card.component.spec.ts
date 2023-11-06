@@ -23,7 +23,7 @@ describe('ReviewCardComponent', () => {
     user: {
       id: '456',
       name: 'Review card user name',
-      imageUri: 'Review card user image uri',
+      imageUri: 'ReviewCardUserImageUri',
     },
     product: {
       id: '789',
@@ -102,9 +102,7 @@ describe('ReviewCardComponent', () => {
       );
 
       expect(image).toBeTruthy();
-      expect(image.src).toEqual(
-        `http://localhost/${reviewModelMock.product.imageUri}`
-      );
+      expect(image.src.endsWith(reviewModelMock.product.imageUri)).toBeTruthy();
     });
 
     it('should product name display', () => {

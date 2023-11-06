@@ -1,6 +1,12 @@
-<div class="shadow-2 surface-card border-round-xl p-4 w-12">
-  <div class="flex">
-    <div class="flex flex-column w-9 lg:w-7">
+<div class="shadow-2 surface-card border-round-xl p-4">
+  <div class="flex flex-column md:flex-row lg:flex-column">
+    <div class="flex align-items-center justify-content-center p-2 md:p-4">
+      <div
+        class="bg-cover bg-center w-10rem h-10rem border-circle"
+        [ngStyle]="{ 'background-image': 'url(' + data.user.imageUri + ')' }"
+        data-test="user-image"></div>
+    </div>
+    <div class="flex flex-column">
       <p class="text-900 font-medium" data-test="username">
         {{ data.user.name }}
       </p>
@@ -14,12 +20,7 @@
         {{ data.message }}
       </p>
     </div>
-    <div class="w-3 lg:w-5 flex align-items-center justify-content-center">
-      <div
-        class="bg-cover bg-center w-10rem h-10rem border-circle"
-        [ngStyle]="{ 'background-image': 'url(' + data.user.imageUri + ')' }"
-        data-test="user-image"></div>
-    </div>
+    
   </div>
   <div class="border-bottom-1 surface-border pb-2">
     <span class="text-500 font-medium text-sm" data-test="date">{{

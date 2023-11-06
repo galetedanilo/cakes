@@ -8,7 +8,7 @@ export class HomeFacade {
   #store = inject(Store);
 
   get promotionsSignal() {
-    return this.#store.selectSignal(homeFeature.selectPromotions);
+    return this.#store.selectSignal(homeFeature.selectAll);
   }
 
   get bestsSignal() {
@@ -25,6 +25,14 @@ export class HomeFacade {
 
   get reviewsSignal() {
     return this.#store.selectSignal(homeFeature.selectReviews);
+  }
+
+  get selectedProduct() {
+    return this.#store.selectSignal(homeFeature.selectSelected);
+  }
+
+  set selectProduct(id: string | null) {
+    this.#store.dispatch(homeActions.selectedProduct({ id }))
   }
 
   enterPage() {

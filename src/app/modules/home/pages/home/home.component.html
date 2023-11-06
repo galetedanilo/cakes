@@ -1,5 +1,6 @@
 <app-slide-container
   [data]="facade.promotionsSignal()"
+  (isSelected)="facade.selectProduct = $event"
   title="Our Promotions" />
 
 <app-messages-container [data]="facade.messagesSignal()" />
@@ -9,3 +10,13 @@
 <app-proffer-container [data]="facade.proffersSignal()" />
 
 <app-reviews-container [data]="facade.reviewsSignal()" />
+
+<p-dialog
+  header="Header"
+  [(visible)]="isSelected"
+  (onHide)="facade.selectProduct = null"
+  position="bottom"
+  [draggable]="false"
+  [resizable]="false"
+  [style]="{ width: '80vw' }"
+  >Deu Certo</p-dialog>

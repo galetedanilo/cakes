@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 
 import { IProfferModel } from '../../models';
-import { ProfferCardComponent } from '../../ui';
+import { ProfferCardComponent, ProfferCardSkeletonComponent } from '../../ui';
 
 @Component({
   selector: 'app-proffer-container',
   standalone: true,
-  imports: [NgFor, ProfferCardComponent],
+  imports: [NgFor, NgIf, ProfferCardComponent, ProfferCardSkeletonComponent],
   templateUrl: './proffer-container.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

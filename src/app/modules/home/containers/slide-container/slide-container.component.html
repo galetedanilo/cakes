@@ -11,7 +11,9 @@
       </ng-template>
       <ng-template let-item pTemplate="item">
         <div class="p-1 md:p-2">
-          <app-product-card [data]="item" />
+          <app-product-card
+            [data]="item"
+            (isSelected)="isSelected.emit($event)" />
         </div>
       </ng-template>
     </p-carousel>

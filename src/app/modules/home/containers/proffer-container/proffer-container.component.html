@@ -1,8 +1,11 @@
 <div
   class="flex align-items-center justify-content-center surface-900 py-5 px-3 w-full">
   <div
-    class="flex flex-column lg:flex-row lg:gap-6"
+    class="flex flex-column gap-4 lg:flex-row "
     style="width: min(1450px, 100vw)">
     <app-proffer-card *ngFor="let item of data" [data]="item" />
+    <ng-container *ngIf="!data.length" class="w-full">
+      <app-proffer-card-skeleton *ngFor="let _item of [1, 2, 3]" />
+    </ng-container>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -17,4 +17,5 @@ import { IProductModel } from '../../models';
 })
 export class ProductCardComponent {
   @Input({ required: true }) data!: IProductModel;
+  @Output() isSelected = new EventEmitter<string | null>();
 }
