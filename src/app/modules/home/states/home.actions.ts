@@ -27,6 +27,6 @@ export const homeActions = createActionGroup({
     loadReviews: emptyProps(),
     loadReviewsSuccess: props<{ reviews: IReviewModel[] }>(),
     loadReviewsFailed: emptyProps(),
-    selectedProduct: props<{ id: string | null}>(),
+    selectProductId: props<{ id: string | null}>(),
   },
 });

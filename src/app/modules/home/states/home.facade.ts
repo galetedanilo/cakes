@@ -28,11 +28,11 @@ export class HomeFacade {
   }
 
   get selectedProduct() {
-    return this.#store.selectSignal(homeFeature.selectSelected);
+    return this.#store.selectSignal(homeFeature.selectSelectedProduct);
   }
 
-  set selectProduct(id: string | null) {
-    this.#store.dispatch(homeActions.selectedProduct({ id }))
+  set selectProductId(id: string | null) {
+    this.#store.dispatch(homeActions.selectProductId({ id }))
   }
 
   enterPage() {

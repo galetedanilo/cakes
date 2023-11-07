@@ -1,4 +1,4 @@
-import { createFeature, createReducer, on } from '@ngrx/store';
+import { createFeature, createReducer, createSelector, on } from '@ngrx/store';
 import { createEntityAdapter } from '@ngrx/entity';
 import { homeActions } from './home.actions';
 import { IProductModel } from '../models';
@@ -11,7 +11,7 @@ const initialState: IHomeState = adapter.getInitialState({
   messages: [],
   proffers: [],
   reviews: [],
-  selected: null,
+  selectedId: null,
   isLoading: false,
 });
 
@@ -130,19 +130,25 @@ const reducer = createReducer(
       isLoading: false,
     })
   ),
-  on(
-    homeActions.selectedProduct,
-    (state, action) => ({
-      ...state,
-      selected: action.id,
-    })
-  )
+  on(homeActions.selectProductId, (state, action) => ({
+    ...state,
+    selectedId: action.id,
+  }))
 );
 
 export const homeFeature = createFeature({
   name: 'homeFeature',
   reducer,
-  extraSelectors: ({ selectHomeFeatureState }) => ({
+  extraSelectors: ({
+    selectHomeFeatureState,
+    selectEntities,
+    selectSelectedId,
+  }) => ({
     ...adapter.getSelectors(selectHomeFeatureState),
+    selectSelectedProduct: createSelector(
+      selectSelectedId,
+      selectEntities,
+      (id, entities) => id ? entities[id] : null
+    ),
   }),
 });

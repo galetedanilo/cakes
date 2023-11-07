@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component, computed, effect, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  effect,
+  inject,
+} from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 
@@ -12,6 +17,7 @@ import {
   ReviewsContainerComponent,
   SlideContainerComponent,
 } from '../../containers';
+import { ProductDetailsComponent } from '../../ui';
 
 @Component({
   standalone: true,
@@ -22,6 +28,7 @@ import {
     ProfferContainerComponent,
     SlideContainerComponent,
     ReviewsContainerComponent,
+    ProductDetailsComponent,
   ],
   templateUrl: './home.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -29,12 +36,9 @@ import {
 export class HomeComponent {
   protected facade = inject(HomeFacade);
 
-  isSelected = true;
+  protected isVisible = false;
 
   constructor() {
-    effect(() => {
-      this.isSelected = !!this.facade.selectedProduct();
-      console.log("Chamou")
-    })
+    effect(() => (this.isVisible = !!this.facade.selectedProduct()));
   }
 }

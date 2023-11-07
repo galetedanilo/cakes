@@ -1,6 +1,6 @@
 <app-slide-container
   [data]="facade.promotionsSignal()"
-  (isSelected)="facade.selectProduct = $event"
+  (isSelected)="facade.selectProductId = $event"
   title="Our Promotions" />
 
 <app-messages-container [data]="facade.messagesSignal()" />
@@ -13,10 +13,11 @@
 
 <p-dialog
   header="Header"
-  [(visible)]="isSelected"
-  (onHide)="facade.selectProduct = null"
+  [(visible)]="isVisible"
+  (onHide)="facade.selectProductId = null"
   position="bottom"
   [draggable]="false"
   [resizable]="false"
   [style]="{ width: '80vw' }"
-  >Deu Certo</p-dialog>
+  ><app-product-details *ngIf="facade.selectedProduct() as data" [data]="data"
+/></p-dialog>

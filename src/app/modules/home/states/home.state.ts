@@ -11,6 +11,6 @@ export interface IHomeState extends EntityState<IProductModel> {
   messages: IMessageModel[];
   proffers: IProfferModel[];
   reviews: IReviewModel[] | null;
-  selected: string | null;
+  selectedId: string | null;
   isLoading: boolean;
 }
